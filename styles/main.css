@@ -1,0 +1,47 @@
+body {
+	
+	margin: 0;
+	padding: 0;
+	max-width: 100%;
+
+
+}
+
+
+.header-page {
+	//height: 500px;
+}
+
+
+.wrapper {
+	margin: 0 auto;
+	width: 1069px;
+}
+
+.clearfix::before {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+.logo {
+   
+    margin: 0 auto;
+    position: relative;
+    width: 400px;
+    margin-top: 338px;
+
+}
+
+.logo-icon {}
+
+.logo-name {
+	position: absolute;
+	top: 0px;
+	right: 10px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	font-size: 50px;
+
+}
