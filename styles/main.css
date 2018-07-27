@@ -12,9 +12,7 @@ body {
 .header-page {
 	
 	position: relative;
-	height: 600px;
-	//background-color: red;
-
+	height: 650px;
 }
 
 
@@ -114,23 +112,24 @@ body {
 
 .portfolio {
 	
-     margin-top: 200px;
-     //background-color: red;
-     height: 500px;
-    
+     margin-top: 100px;
+     height: 755px;
     
 }
 
 
 
-.menu {
+.menu-portfolio {
    position: absolute;
-    margin: auto;
+   margin: auto;
    top: 30px;
    left: 0px;
    right: 0px;
    bottom: 0px;
 }
+
+
+
 
 .menu-top {
 	float: left;
@@ -173,7 +172,7 @@ body {
    padding: 0px;
    display: inline-block;
    margin-right: 30px;
-   font-size: 22px;
+   font-size: 18px;
    vertical-align: middle;
 
 
@@ -193,36 +192,34 @@ body {
 
 /* Стилизуем слайдер */
 
-.slideshow-container {
+.slideshow-container-portfolio {
 	width: 100%;
 	position: relative;
-	
-	
 }
 
-.fade:nth-child(1){
+.fade-portfolio:nth-child(1){
 	background-image: url(../images/background-portfolio-1.png);
 	
 }
 
-.fade:nth-child(2) {
+.fade-portfolio:nth-child(2) {
     background-image: url(../images/background-portfolio-2.png);
     
 
 }
 
-.fade:nth-child(3) {
+.fade-portfolio:nth-child(3) {
     background-image: url(../images/background-portfolio-3.png);
 }
 
-.fade {
-	height: 725px;
+.fade-portfolio {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
+	height: 755px;
 
 }
-}
+
 
 .next {
 	right: 35px;
@@ -237,7 +234,7 @@ body {
 }
 
 
-.dot {
+.dot-portfolio {
 	cursor: pointer;
 	height: 12px;
 	width: 12px;
@@ -250,15 +247,14 @@ body {
 
 }
 
-.dot:nth-child(3), .dot:nth-child(4) {
+.dot-portfolio:nth-child(3), .dot-portfolio:nth-child(4) {
       
     margin-bottom: 5px;
    
 
 }
 
-.mark-slide {
-	//background-color: red;
+.mark-slide-portfolio {
 	position: absolute;
 	bottom: 73px;
 	left: 144px;
@@ -290,6 +286,9 @@ body {
 
 .social-porfolio {
 	margin-top: 150px;
+	position: relative;
+	z-index: 1;
+	font-size: 25px;
 }
 
 .social-slide-p {
@@ -310,7 +309,7 @@ body {
 	float: right;
 }
 
-.counter {
+.counter-portfolio {
 	font-size: 103px;
 	color: white;
 	font-weight: bold;
@@ -319,12 +318,252 @@ body {
 	bottom: 55px;
 	left: 260px;
     
+ }
 
+
+/* Конец стили портфолио */
+
+
+
+
+/* Начало стили фидбека */
+
+.feedback {
+	margin-top: 100px;
+	height: 700px;
+}
+
+.menu-feedback {
+
+	
+}
+
+.menu-feedback .menu-list li a {
+      
+      color: black;
 }
 
 
+.menu-feedback .menu-caption {
+	color: black;
+}
+
+.menu-logo svg {
+	stroke: black;
+}
+
+.title-feedback {
+	text-align: center;
+	margin-top: 60px;
+	font-weight: lighter;
+	font-size: 16px;
+}
+
+/* Начало стили слайдера для фидбека */
+
+
+.slideshow-container-feedback {
+	
+	position: relative;
+	height: 400px;
+	
+}
+
+.fade-feedback  {
+	margin-top: 50px;
+  
+}
+
+
+.mark-feedback {
+    margin-top: 20px;
+    display: table;
+    margin: auto;
+   
+}
+
+/* ширина у .fade-feedback img и .img-feedback-client должны совпадать
+чтобы центрировать фотку клиентов */
+
+.fade-feedback img {
+   border-radius: 50%;
+   height: 100px;
+   width: 100px;
+}
+
+
+.img-feedback-client {
+	margin: 0 auto;
+	width: 100px;
+}
+
+.next-feedback, .prev-feedback {
+	position: absolute;
+    cursor: pointer;
+    top: 40%;
+    margin-top: -25px;
+
+}
+
+.prev-feedback {
+	left: 40%;
+}
+
+.next-feedback {
+   right: 40%;
+}
+
+.prev-feedback:hover, .next-feedback:hover {
+	background-color: rgba(0,0,0,0.8);
+}
+
+
+.dot-feedback {
+	cursor: pointer;
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	margin-left: 30px;
+
+}
+
+.dot-feedback:nth-child(1){
+	background-image: url(../images/feedback-1.jpg);
+	margin-left: 0px;
+	
+}
+
+.dot-feedback:nth-child(2) {
+    background-image: url(../images/feedback-2.jpg);
+    
+
+}
+
+.dot-feedback:nth-child(3) {
+    background-image: url(../images/feedback-3.jpg);
+}
+
+.dot-feedback:nth-child(4) {
+    background-image: url(../images/feedback-4.jpg);
+}
+
+.name-feedback {
+	text-align: center;
+	font-size: 17px;
+	font-weight: bold;
+}
+
+.comment-feedback {
+	text-align: center;
+	font-size: 14px;
+	padding-left: 260px;
+	padding-right: 260px;
+}
+
+/* Конец стили фидбека */
 
 
 
 
+/* Начало стили блока команды */
+
+.crew {
+	margin-top: 100px;
+	height: 700px;
+}
+
+
+.menu-crew {
+
+} 
+
+.menu-crew li a {
+	color: black;
+}
+
+.menu-crew .menu-caption {
+	color: black;
+}
+
+
+.team-container {
+	margin-top: 50px;
+}
+
+.crewman {
+	height: 460px;
+	width: 275px;
+	border-radius: 50px;
+   -webkit-box-shadow: -1px 5px 21px 0px rgba(0,0,0,0.35);
+-moz-box-shadow: -1px 5px 21px 0px rgba(0,0,0,0.35);
+box-shadow: -1px 5px 21px 0px rgba(0,0,0,0.35);
+    overflow: hidden;
+    display: inline-block;
+    margin-left: 80px;
+}
+
+.crewman:nth-child(1) {
+	margin-left: 0px;
+}
+
+.photo-crewman {
+	height: 270px;
+}
+
+.positiom-crewman {
+	text-align: center;
+	font-size: 16px;
+    font-family: 'Didact Gothic', sans-serif;
+    color: rgba(0, 0, 0, 0.5)
+}
+
+.social-crewman {
+	display: table;
+	margin: auto;
+	margin-top: 36px;
+}
+
+
+.social-crewman a {
+   color: rgba(0, 0, 0, 0.25);
+   font-size: 25px;
+   margin-left: 35px;
+}
+
+.social-crewman a:nth-child(1) {
+	margin-left: 0px;
+}
+
+.name-crewman {
+	text-align: center;
+	font-size: 22px;
+    font-weight: bolder;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.photo-crewman {
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center center;
+}
+
+.photo-crewman-1 {
+    background-image: url(../images/crewman-1.png);
+ }
+
+.photo-crewman-2 {
+     background-image: url(../images/crewman-2.png);
+ }
+
+.photo-crewman-3 {
+     background-image: url(../images/crewman-3.png);
+ }
+
+/* Конец стили блока команды */
 
