@@ -4,14 +4,41 @@
 	<meta charset="utf-8">
 	<title>CircleSquare</title>
 	  <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--  <meta name="viewport" content="width=device-width, initial-scale=1"> -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Didact+Gothic:300,400,500,900" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="styles/main.css">
-	<link rel="stylesheet" type="text/css" href="styles/font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="styles/font-awesome/css/font-awesome.min.css">
+	<script src="scripts/jquery.js"></script>
 </head>
 <body>
+<div class="main-frame">
+	<div class="menu clearfix">
+
+	<div class="wrapper">
+    <div class="menu-top">
+		<div class="menu-logo">
+           <svg width="68" height="70" viewBox="0 0 68 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+<ellipse cx="33" cy="15.5152" rx="33" ry="15.5152" transform="translate(66 2) rotate(90)" stroke="" stroke-width="4"/>
+<path d="M66 0C66 8.56878 51.2254 15.5152 33 15.5152C14.7746 15.5152 0 8.56878 0 0" transform="translate(17.5151 2) rotate(90)" stroke="" stroke-width="4"/>
+<path d="M0 0V32.9697M66 0V32.9697" transform="translate(50.4849 2) rotate(90)" stroke="" stroke-width="4"/>
+</svg>
+   </div>
+       <div class="menu-caption">showcase</div>
+	</div>
+      
+      <div class="menu-list">
+        <ul>
+        	<li id="frame-portfolio">Портфолио</li>
+        	<li id="frame-crew">Отзывы</li>
+			<li id="frame-feedback">Команда</li>
+			<li>Контакты</li>
+		</ul>
+     </div>
+	</div>
+
+</div>
 
 <header class="header-page">
 	<div class="left-top-rangle"></div>
@@ -48,7 +75,7 @@
 
 
 
-<section class="portfolio">
+<section class="portfolio frame-cont">
 	
 
      <div class="slideshow-container-portfolio">
@@ -60,14 +87,14 @@
 		    <p class="subscript-portfolio">Балдежный проект с мешками, сетками и мешками и сет... ой... ладно, насрать, тут описание прокета и остальная инфа о сайте и
 о том, какие мы классные дезигнеры, кодеры и сммщики</p>
 		   </div>
-		   <div class="clearfix wrapper"> 
+		   
 		   <div class="social-porfolio">
 		  <div class="twitter-portfolio social-slide-p"><a href ="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></div>
 		   <div class="facebook-portfolio social-slide-p"><a href ="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></div>
 		   <div class="tumblr-portfolio social-slide-p"><a href ="#"><i class="fa fa-tumblr" aria-hidden="true"></i></a></div>
 		   <div class="pinterest-portfolio social-slide-p"><a href ="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></div>
-           </div>
-       </div>
+         </div>
+         
         </div>
 	    <div class="mySlides fade-portfolio">
 	        <div class="description-portfolio">
@@ -99,7 +126,7 @@
        </div>
            </div>
 
-
+<!--
 <div class="menu-portfolio clearfix">
 
 	<div class="wrapper">
@@ -124,7 +151,7 @@
 	</div>
 
 </div>
-
+-->
 <div class="counter-portfolio">
 	1/4
 </div>
@@ -136,13 +163,14 @@
   <span class="dot-portfolio" onclick="currentSlide_porfolio(4);"></span>
 </div>
 	</div>
-</div>
+
 </section>
 
 
 
 
-<section class="feedback">
+<section class="feedback frame-cont">
+<!--
 	<div class="menu-feedback clearfix">
 		<div class="wrapper">
     <div class="menu-top">
@@ -165,7 +193,7 @@
      </div>
 	</div>
 	</div>
-   
+   -->
     <h4 class="title-feedback">Still need convicing ? Check out what people are saying about Circlesquare</h4>
 
 
@@ -225,9 +253,9 @@
 
 
 
-<section class="crew">
+<section class="crew frame-cont">
 	<div class="wrapper">
-
+<!--
       <div class="menu-crew clearfix">
       	<div class="menu-top">
 		<div class="menu-logo">
@@ -248,7 +276,7 @@
 		</ul>
      </div>
 	</div>
-
+-->
     
     <div class="team-container">
     	<div class="crewman">
@@ -294,8 +322,7 @@
 </section>
 
 
-
-
+</div>
 <script src="scripts/main.js"></script>
 </body>
 </html>

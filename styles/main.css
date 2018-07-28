@@ -5,7 +5,84 @@ body {
 	min-width: 1024px;
 	font-family: 'Open Sans', sans-serif;
 
+
 }
+
+
+
+.menu {
+   position: fixed;
+   top: 50px;
+   left: 70px;
+   z-index: 2;
+
+}
+
+.menu-top {
+	float: left;
+}
+
+.menu-top .menu-logo {
+    
+    display: inline-block;
+    vertical-align: middle;
+
+}
+
+.menu-top .menu-caption {
+     
+     display: inline-block;
+     font-size: 44px;
+     vertical-align: middle;
+     font-weight: 900;
+     margin-left: 50px;
+     margin-bottom: 10px;
+     color: white;
+
+
+
+}
+
+.menu-list {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	float: right;
+
+	
+
+}
+
+
+.menu-list li {
+   margin: 0px;
+   padding: 0px;
+   display: inline-block;
+   margin-right: 30px;
+   font-size: 18px;
+   vertical-align: middle;
+   color: white;
+   cursor: pointer;
+   font-family: 'Didact Gothic', sans-serif;
+   transition-duration: 1s;
+
+}
+
+.menu-list li:hover {
+    transition-duration: 1s;
+	border-bottom: 2px solid #3E3E3E;
+	
+
+}
+
+
+.menu-list li:last-child {
+    margin-right: 0px;
+}
+
+
+
+
 
 /* Стили блока хедера */
 
@@ -13,6 +90,7 @@ body {
 	
 	position: relative;
 	height: 650px;
+	display: none;
 }
 
 
@@ -112,84 +190,12 @@ body {
 
 .portfolio {
 	
-     margin-top: 100px;
+     //margin-top: 100px;
      height: 755px;
+     position: relative;
+
     
 }
-
-
-
-.menu-portfolio {
-   position: absolute;
-   margin: auto;
-   top: 30px;
-   left: 0px;
-   right: 0px;
-   bottom: 0px;
-}
-
-
-
-
-.menu-top {
-	float: left;
-}
-
-.menu-top .menu-logo {
-    
-    display: inline-block;
-    vertical-align: middle;
-
-}
-
-.menu-top .menu-caption {
-     
-     display: inline-block;
-     font-size: 44px;
-     vertical-align: middle;
-     font-weight: 900;
-     margin-left: 50px;
-     margin-bottom: 10px;
-     color: white;
-
-
-
-}
-
-.menu-list {
-	list-style: none;
-	margin: 0px;
-	padding: 0px;
-	float: right;
-
-	
-
-}
-
-
-.menu-list li {
-   margin: 0px;
-   padding: 0px;
-   display: inline-block;
-   margin-right: 30px;
-   font-size: 18px;
-   vertical-align: middle;
-
-
-}
-
-.menu-list li:last-child {
-    margin-right: 0px;
-}
-
-.menu-list li a {
-	text-decoration: none;
-	color: white;
-	
-
-}
-
-
 /* Стилизуем слайдер */
 
 .slideshow-container-portfolio {
@@ -285,10 +291,12 @@ body {
 }
 
 .social-porfolio {
-	margin-top: 150px;
-	position: relative;
-	z-index: 1;
+   
+    z-index: 1;
 	font-size: 25px;
+	position: absolute;
+	bottom: 50px;
+    right: 100px;
 }
 
 .social-slide-p {
@@ -329,8 +337,9 @@ body {
 /* Начало стили фидбека */
 
 .feedback {
-	margin-top: 100px;
 	height: 700px;
+	position: relative;
+	padding-top: 100px;
 }
 
 .menu-feedback {
@@ -349,7 +358,11 @@ body {
 }
 
 .menu-logo svg {
-	stroke: black;
+	stroke: white;
+}
+
+.menu-logo {
+	position: relative;
 }
 
 .title-feedback {
@@ -474,8 +487,8 @@ body {
 /* Начало стили блока команды */
 
 .crew {
-	margin-top: 100px;
 	height: 700px;
+	position: relative;
 }
 
 
@@ -566,4 +579,29 @@ box-shadow: -1px 5px 21px 0px rgba(0,0,0,0.35);
  }
 
 /* Конец стили блока команды */
+
+
+
+/* стилизуем фрейм для прокрутки */
+
+.main-frame {
+	height: 700px;
+	overflow: hidden;
+	position: relative;
+	transition-duration: 1s;
+
+}
+
+.frame-cont {
+	transition-duration: 1s; 
+	transition-timing-function: ease;
+}
+
+
+
+
+
+
+
+
 

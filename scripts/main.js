@@ -31,12 +31,7 @@ function showSlides_porfolio(n) {
     var dots_portfolio = document.querySelectorAll('span.dot-portfolio');
     var counter_portfolio = document.querySelector('div.counter-portfolio');
 
-   // var slides_feedback = document.querySelectorAll('div.fade-feedback');
-   // var dots_feedback = document.querySelectorAll('span.dot-feedback');
-   // var counter_feedback = document.querySelector('div.counter-feedback');
-
-
-
+   
     if (n > slides_portfolio.length) {
         slideIndex_porfolio = 1;
     }
@@ -129,7 +124,6 @@ function showSlides_feedback(n) {
 
    slides_feedback[slideIndex_feedback-1].style.display = "block";
    dots_feedback[slideIndex_feedback-1].className += " active";
-   //counter_feedback.innerHTML = slideIndex_porfolio+"/4";
 
     
     return slideIndex_feedback;
@@ -149,6 +143,143 @@ function showSlides_feedback(n) {
     }
 autoplay_feedback();
 */
+
+
+
+
+
+/* Скрипты для прокрутки */
+
+$("#frame-portfolio").click(function(){
+  $(".portfolio").animate({
+    top: "0"
+  }, 1000 );
+
+ $(".feedback").animate({
+    top: ""+document.documentElement.clientHeight
+  }, 1000);
+ $(".crew").animate({
+    top: ""+document.documentElement.clientHeight
+  }, 1000 );
+
+
+
+   $(".menu-logo").animate({
+       left: "300px"
+    }, 300);
+
+   $(".menu-caption").animate({
+        opacity: 0
+   }, 300);
+
+     $(".menu-logo").animate({
+       left: "0px"
+    }, 300);
+
+     $(".menu-caption").animate({
+        opacity: 1
+   }, 300);
+   
+   $(".menu-caption").text("showcase");
+   $(".menu-caption").css({color:"white"});
+   $(".menu-list li").css({color:"white"});
+   $(".menu-logo svg").css({stroke:"white"});
+
+});
+
+
+
+//-500px
+$("#frame-crew").click(function(){
+  $(".portfolio").animate({
+    top: "-"+document.documentElement.clientHeight
+  }, 1000 );
+
+ $(".feedback").animate({
+    top: "-"+document.documentElement.clientHeight
+  }, 1000 );
+ $(".crew").animate({
+    top: "-"+document.documentElement.clientHeight
+  }, 1000 );
+
+   
+  $(".menu-logo").animate({
+       left: "300px"
+    }, 300);
+
+   $(".menu-caption").animate({
+        opacity: 0
+   }, 300);
+
+     $(".menu-logo").animate({
+       left: "0px"
+    }, 300);
+
+     $(".menu-caption").animate({
+        opacity: 1
+   }, 300);
+
+
+   $(".menu-caption").text("crew");
+   $(".menu-caption").css({color:"black"});
+   $(".menu-list li").css({color:"black"});
+   $(".menu-logo svg").css({stroke:"black"});
+});
+
+
+
+//-1000px
+$("#frame-feedback").click(function(){
+  $(".portfolio").animate({
+    top: "-"+(2*document.documentElement.clientHeight)
+  }, 1000 );
+
+ $(".feedback").animate({
+    top: "-"+(2*document.documentElement.clientHeight)
+  }, 1000 );
+ $(".crew").animate({
+    top: "-"+(2*document.documentElement.clientHeight)
+  }, 1000 );
+
+   $(".menu-logo").animate({
+       left: "300px"
+    }, 300);
+
+   $(".menu-caption").animate({
+        opacity: 0
+   }, 300);
+
+     $(".menu-logo").animate({
+       left: "0px"
+    }, 300);
+
+     $(".menu-caption").animate({
+        opacity: 1
+   }, 300);
+
+   $(".menu-caption").text("Parthners");
+   $(".menu-caption").css({color:"black"});
+   $(".menu-list li").css({color:"black"});
+   $(".menu-logo svg").css({stroke:"black"});
+
+});
+
+$(".main-frame").css({height:""+document.documentElement.clientHeight+"px"});
+$(".frame-cont").css({height:""+document.documentElement.clientHeight+"px"});
+$(".fade-portfolio").css({height:""+document.documentElement.clientHeight+"px"});
+//$(".cont-2").css({height:""+document.documentElement.clientHeight+"px"});
+//$(".header").css({height:""+document.documentElement.clientHeight+"px"});
+
+
+
+
+
+
+
+
+
+
+
 
 
 
