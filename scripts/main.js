@@ -165,6 +165,20 @@ autoplay_feedback();
 
 /* Скрипты для прокрутки */
 
+
+//анимирую это еще раз, это помогает убрать баг в котором блок западал 
+ $(".portfolio").animate({
+    top: "0"
+  }, 1 );
+
+ $(".feedback").animate({
+    top: ""+document.documentElement.clientHeight
+  }, 1);
+ $(".crew").animate({
+    top: ""+document.documentElement.clientHeight
+  }, 1 );
+
+
 $("#frame-portfolio").click(function(){
   $(".portfolio").animate({
     top: "0"
