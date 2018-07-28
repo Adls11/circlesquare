@@ -54,6 +54,34 @@ body {
 }
 
 
+
+
+.menu-underline {
+    height: 3px;
+    position: relative;
+    box-sizing: border-box;
+    transition: all 500ms ease; 
+}
+
+.linemove {
+ content:'';
+ position: absolute;
+ top: 0px;
+ left: 0px;
+ width: 0px;
+ height: 3px;
+ opacity: 0.3;
+ background: white;
+ border-radius: 5px;
+ transition: all 0.2s ease;
+}
+
+.menu-list li:hover .linemove {
+ width: 70%;
+}
+
+
+
 .menu-list li {
    margin: 0px;
    padding: 0px;
@@ -68,12 +96,7 @@ body {
 
 }
 
-.menu-list li:hover {
-    transition-duration: 1s;
-	border-bottom: 2px solid #3E3E3E;
-	
 
-}
 
 
 .menu-list li:last-child {
@@ -88,8 +111,17 @@ body {
 
 .header-page {
 	
-	position: relative;
+	position: fixed;
 	height: 650px;
+	z-index: 10;
+	background-color: white;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	top: 0px;
+	margin: auto;
+	height: 100%;
+	transition-duration: 1s; 
 	display: none;
 }
 
@@ -161,7 +193,7 @@ body {
 }
 
 .left-bottom-rangle {
-	bottom: 0px;
+	bottom: 64px;
 	left: 64px;
 	border-left: 4px solid black;
 	border-bottom: 4px solid black;
@@ -171,7 +203,7 @@ body {
 }
 
 .right-bottom-rangle {
-	bottom: 0px;
+	bottom: 64px;
 	right: 64px;
 	border-right: 4px solid black;
 	border-bottom: 4px solid black;

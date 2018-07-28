@@ -1,4 +1,9 @@
 
+/*
+$(window).load(function() {
+  $("#preload-main").find('.logo').fadeOut().end().delay(400).fadeOut('slow');
+});
+*/
 
 //Обязатеьно оптимизиторвать js скрипт для слайдера
 // Сделать общую функцию для добавлению слайдеров без
@@ -64,7 +69,7 @@ function showSlides_porfolio(n) {
 
  function autoplay_porfolio() {
      
-     interval = setInterval(play, 4000);
+     interval = setInterval(play, 10000);
 
     i = 1;
      function play()
@@ -148,19 +153,29 @@ autoplay_feedback();
 
 
 
+/* Прелоадер */
+
+/*
+  $(".header-page").animate({
+  	display: "none"
+  	},10);
+*/
+
+
+
 /* Скрипты для прокрутки */
 
 $("#frame-portfolio").click(function(){
   $(".portfolio").animate({
     top: "0"
-  }, 1000 );
+  }, 1 );
 
  $(".feedback").animate({
     top: ""+document.documentElement.clientHeight
-  }, 1000);
+  }, 1);
  $(".crew").animate({
     top: ""+document.documentElement.clientHeight
-  }, 1000 );
+  }, 1 );
 
 
 
@@ -184,23 +199,24 @@ $("#frame-portfolio").click(function(){
    $(".menu-caption").css({color:"white"});
    $(".menu-list li").css({color:"white"});
    $(".menu-logo svg").css({stroke:"white"});
+   $(".linemove").css({background:"white"});
 
 });
 
 
 
-//-500px
-$("#frame-crew").click(function(){
+
+$("#frame-feedback").click(function(){
   $(".portfolio").animate({
     top: "-"+document.documentElement.clientHeight
-  }, 1000 );
+  }, 1 );
 
  $(".feedback").animate({
     top: "-"+document.documentElement.clientHeight
-  }, 1000 );
+  }, 1 );
  $(".crew").animate({
     top: "-"+document.documentElement.clientHeight
-  }, 1000 );
+  }, 1 );
 
    
   $(".menu-logo").animate({
@@ -220,26 +236,28 @@ $("#frame-crew").click(function(){
    }, 300);
 
 
-   $(".menu-caption").text("crew");
+   $(".menu-caption").text("Parthners");
    $(".menu-caption").css({color:"black"});
    $(".menu-list li").css({color:"black"});
    $(".menu-logo svg").css({stroke:"black"});
+   $(".linemove").css({background:"black"});
+
 });
 
 
 
-//-1000px
-$("#frame-feedback").click(function(){
+
+$("#frame-crew").click(function(){
   $(".portfolio").animate({
     top: "-"+(2*document.documentElement.clientHeight)
-  }, 1000 );
+  }, 1 );
 
  $(".feedback").animate({
     top: "-"+(2*document.documentElement.clientHeight)
-  }, 1000 );
+  }, 1 );
  $(".crew").animate({
     top: "-"+(2*document.documentElement.clientHeight)
-  }, 1000 );
+  }, 1 );
 
    $(".menu-logo").animate({
        left: "300px"
@@ -257,10 +275,12 @@ $("#frame-feedback").click(function(){
         opacity: 1
    }, 300);
 
-   $(".menu-caption").text("Parthners");
+   $(".menu-caption").text("Crew");
    $(".menu-caption").css({color:"black"});
    $(".menu-list li").css({color:"black"});
    $(".menu-logo svg").css({stroke:"black"});
+   $(".linemove").css({background:"black"});
+
 
 });
 
