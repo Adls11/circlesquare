@@ -22,6 +22,15 @@ body {
 	float: left;
 }
 
+.menu-logo svg {
+	stroke: white;
+}
+
+.menu-logo {
+	position: relative;
+}
+
+
 .menu-top .menu-logo {
     
     display: inline-block;
