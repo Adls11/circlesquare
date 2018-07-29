@@ -374,28 +374,6 @@ body {
 	padding-top: 100px;
 }
 
-.menu-feedback {
-
-	
-}
-
-.menu-feedback .menu-list li a {
-      
-      color: black;
-}
-
-
-.menu-feedback .menu-caption {
-	color: black;
-}
-
-.menu-logo svg {
-	stroke: white;
-}
-
-.menu-logo {
-	position: relative;
-}
 
 .title-feedback {
 	text-align: center;
@@ -522,20 +500,6 @@ body {
 	height: 700px;
 	position: relative;
 }
-
-
-.menu-crew {
-
-} 
-
-.menu-crew li a {
-	color: black;
-}
-
-.menu-crew .menu-caption {
-	color: black;
-}
-
 
 .team-container {
 	margin-top: 50px;
