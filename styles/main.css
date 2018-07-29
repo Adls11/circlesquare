@@ -10,6 +10,36 @@ body {
 
 
 
+@keyframes fade-portfolio {
+	from
+	{
+		opacity: 0;
+		
+	}
+
+	to
+	{
+		opacity: 1;
+		
+	}
+}
+
+
+
+@keyframes fade-feedback {
+	from
+	{
+		opacity: 0.4;
+		
+	}
+
+	to
+	{
+		opacity: 1;
+		
+	}
+}
+
 .menu {
    position: fixed;
    top: 50px;
@@ -264,8 +294,11 @@ body {
 	background-size: cover;
 	background-position: center center;
 	height: 755px;
+	animation-name: fade-portfolio;
+	animation-duration: 2s;
 
 }
+
 
 
 .next {
@@ -381,6 +414,7 @@ body {
 	height: 700px;
 	position: relative;
 	padding-top: 100px;
+	
 }
 
 
@@ -398,11 +432,16 @@ body {
 	
 	position: relative;
 	height: 400px;
+
+
 	
 }
 
 .fade-feedback  {
 	margin-top: 50px;
+	transition: all 0.3s ease;
+	animation-name: fade-feedback;
+	animation-duration: 1.5s;
   
 }
 
@@ -430,11 +469,22 @@ body {
 }
 
 .next-feedback, .prev-feedback {
+	padding: 0px;
+	margin: 0px;
 	position: absolute;
     cursor: pointer;
     top: 40%;
     margin-top: -25px;
-
+    border-radius: 50%;
+    font-size: 15px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    width: 25px;
+    color: black;
+    text-align: center;
+    transition: all 0.3s ease;
+    
+    
 }
 
 .prev-feedback {
@@ -447,8 +497,8 @@ body {
 
 .prev-feedback:hover, .next-feedback:hover {
 	background-color: rgba(0,0,0,0.8);
+	color: white;
 }
-
 
 .dot-feedback {
 	cursor: pointer;
@@ -456,13 +506,25 @@ body {
 	width: 40px;
 	border-radius: 50%;
 	display: inline-block;
-	transition: background-color 0.6s ease;
 	text-align: center;
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
 	margin-left: 30px;
 
+
+}
+
+.cover-feedback {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+    transition: background-color 0.3s ease;
+
+}
+
+.cover-feedback:hover {
+    background-color: rgba(255,255,255,0.7);
 }
 
 .dot-feedback:nth-child(1){
