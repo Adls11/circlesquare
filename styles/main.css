@@ -182,7 +182,7 @@ body {
    margin: 0 auto;
    position: relative;
    width: 400px;
-   padding-top: 55px;
+   //padding-top: 55px;
    }
 
 .logo-icon {
@@ -228,7 +228,7 @@ body {
 
 .fade-header p {
 	text-align: center;
-	font-size: 35px;
+	font-size: 30px;
 	margin: 0px;
 	padding: 0px;
 	
@@ -253,7 +253,7 @@ body {
 
 .mark-header {
 
-    margin-top: 20px;
+    //margin-top: 20px;
     position: absolute;
     height: 6px;
     width: 6px;
@@ -272,8 +272,16 @@ body {
 	background-color: #C4C4C4;
 	display: block;
 	margin-top: 10px;
+	transition-duration: 0.5s;
 	
 }
+
+
+.dot-header:hover {
+	background-color: black;
+	transition-duration: 0.5s;
+}
+
 
 .dot-header:nth-child(1) {
 	background-color: black;
@@ -348,7 +356,7 @@ body {
 
 .portfolio {
 
-     height: 755px;
+    
      position: relative;
 
     
@@ -358,7 +366,7 @@ body {
  */
 
 .slideshow-container-portfolio {
-	width: 100%;
+
 	position: relative;
 }
 
@@ -381,7 +389,7 @@ body {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
-	height: 755px;
+    
 	animation-name: fade-portfolio;
 	animation-duration: 2s;
 
@@ -448,7 +456,7 @@ body {
 .description-portfolio {
 	width: 600px;
 	color: white;
-	padding-top: 300px;
+	//padding-top: 300px;
 	padding-left: 115px;
 
 }
@@ -502,9 +510,10 @@ body {
 /* Начало стили фидбека */
 
 .feedback {
-	height: 700px;
+
 	position: relative;
-	padding-top: 100px;
+
+	
 	
 }
 
@@ -514,6 +523,8 @@ body {
 	margin-top: 60px;
 	font-weight: lighter;
 	font-size: 16px;
+	margin: 0px;
+	padding: 0px;
 }
 
 /* Начало стили слайдера для фидбека */
@@ -522,14 +533,14 @@ body {
 .slideshow-container-feedback {
 	
 	position: relative;
-	height: 400px;
+	//height: 400px;
 
 
 	
 }
 
 .fade-feedback  {
-	margin-top: 50px;
+	//margin-top: 50px;
 	transition: all 0.3s ease;
 	animation-name: fade-feedback;
 	animation-duration: 1.5s;
@@ -538,7 +549,7 @@ body {
 
 
 .mark-feedback {
-    margin-top: 20px;
+    //margin-top: 20px;
     display: table;
     margin: auto;
    
@@ -659,12 +670,11 @@ body {
 /* Начало стили блока команды */
 
 .crew {
-	height: 700px;
 	position: relative;
 }
 
 .team-container {
-	margin-top: 50px;
+	
 }
 
 .crewman {
@@ -697,7 +707,7 @@ box-shadow: -1px 5px 21px 0px rgba(0,0,0,0.35);
 .social-crewman {
 	display: table;
 	margin: auto;
-	margin-top: 36px;
+	//margin-top: 36px;
 }
 
 
@@ -739,11 +749,19 @@ box-shadow: -1px 5px 21px 0px rgba(0,0,0,0.35);
 /* Конец стили блока команды */
 
 
+/* Начало стили блока контакты */
+
+.contact {
+	background-color: #3E3E3E;
+	position: relative;
+}
+
+
 
 /* стилизуем фрейм для прокрутки */
 
 .main-frame {
-	height: 700px;
+
 	overflow: hidden;
 	position: relative;
 	transition-duration: 1s;
@@ -753,6 +771,7 @@ box-shadow: -1px 5px 21px 0px rgba(0,0,0,0.35);
 .frame-cont {
 	transition-duration: 1s; 
 	transition-timing-function: ease;
+
 }
 
 

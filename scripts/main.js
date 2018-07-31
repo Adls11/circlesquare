@@ -156,6 +156,11 @@ autoplay_feedback();
 //Для первого слайдера
 
 //-250
+
+ $(".fade-header").animate({
+    top: "0"
+      }, 1);
+
 $("#slide-header-1").click(function(){
      
       $(".fade-header").animate({
@@ -223,6 +228,26 @@ $("#slide-header-4").click(function(){
 
 //анимирую это еще раз, это помогает убрать баг в котором блок западал 
 
+
+function animate_menu() {
+	$(".menu-logo").animate({
+       left: "300px"
+    }, 300);
+
+   $(".menu-caption").animate({
+        opacity: 0
+   }, 300);
+
+     $(".menu-logo").animate({
+       left: "0px"
+    }, 300);
+
+     $(".menu-caption").animate({
+        opacity: 1
+   }, 300);
+}
+
+
  $(".header-page").animate({
     top: "0"
   }, 1 );
@@ -254,6 +279,10 @@ $("#frame-header").click(function(){
    $(".crew").animate({
     top: "-"+document.documentElement.clientHeight
   }, 1 );
+    
+   $(".contact").animate({
+    top: "-"+document.documentElement.clientHeight
+  }, 1 );
 
 });
 
@@ -270,23 +299,13 @@ $("#frame-portfolio").click(function(){
     top: "-"+document.documentElement.clientHeight
   }, 1 );
 
+ $(".contact").animate({
+    top: "-"+document.documentElement.clientHeight
+  }, 1 );
 
 
-   $(".menu-logo").animate({
-       left: "300px"
-    }, 300);
 
-   $(".menu-caption").animate({
-        opacity: 0
-   }, 300);
-
-     $(".menu-logo").animate({
-       left: "0px"
-    }, 300);
-
-     $(".menu-caption").animate({
-        opacity: 1
-   }, 300);
+   animate_menu();
    
    $(".menu-caption").text("showcase");
    $(".menu-caption").css({color:"white"});
@@ -314,22 +333,12 @@ $("#frame-feedback").click(function(){
     top: "-"+(2*document.documentElement.clientHeight)
   }, 1 );
 
+ $(".contact").animate({
+    top: "-"+(2*document.documentElement.clientHeight)
+  }, 1 );
+
    
-  $(".menu-logo").animate({
-       left: "300px"
-    }, 300);
-
-   $(".menu-caption").animate({
-        opacity: 0
-   }, 300);
-
-     $(".menu-logo").animate({
-       left: "0px"
-    }, 300);
-
-     $(".menu-caption").animate({
-        opacity: 1
-   }, 300);
+  animate_menu();
 
 
    $(".menu-caption").text("Parthners");
@@ -358,21 +367,11 @@ $("#frame-crew").click(function(){
     top: "-"+(3*document.documentElement.clientHeight)
   }, 1 );
 
-   $(".menu-logo").animate({
-       left: "300px"
-    }, 300);
+ $(".contact").animate({
+    top: "-"+(3*document.documentElement.clientHeight)
+  }, 1 );
 
-   $(".menu-caption").animate({
-        opacity: 0
-   }, 300);
-
-     $(".menu-logo").animate({
-       left: "0px"
-    }, 300);
-
-     $(".menu-caption").animate({
-        opacity: 1
-   }, 300);
+   animate_menu();
 
    $(".menu-caption").text("Crew");
    $(".menu-caption").css({color:"black"});
@@ -382,6 +381,39 @@ $("#frame-crew").click(function(){
 
 
 });
+
+$("#frame-contact").click(function(){
+       
+   $(".header-page").animate({
+    top: "-"+(4*document.documentElement.clientHeight)
+  }, 1 );
+
+    $(".portfolio").animate({
+    top: "-"+(4*document.documentElement.clientHeight)
+  }, 1 );
+
+   $(".feedback").animate({
+    top: "-"+(4*document.documentElement.clientHeight)
+  }, 1 );
+   $(".crew").animate({
+    top: "-"+(4*document.documentElement.clientHeight)
+  }, 1 );
+
+   $(".contact").animate({
+    top: "-"+(4*document.documentElement.clientHeight)
+  }, 1 );
+
+    animate_menu();
+
+   $(".menu-caption").text("Contact");
+   $(".menu-caption").css({color:"white"});
+   $(".menu-list li").css({color:"white"});
+   $(".menu-logo svg").css({stroke:"white"});
+   $(".linemove").css({background:"white"});
+
+
+
+	});
 
 $(".main-frame").css({height:""+document.documentElement.clientHeight+"px"});
 $(".frame-cont").css({height:""+document.documentElement.clientHeight+"px"});
