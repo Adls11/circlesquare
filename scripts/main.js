@@ -213,7 +213,7 @@ $("#slide-header-4").click(function(){
 
 
 
-/* Прелоадер */
+/* load */
 
 /*
   $(".header-page").animate({
@@ -224,10 +224,6 @@ $("#slide-header-4").click(function(){
 
 
 /* Скрипты для прокрутки */
-
-
-//анимирую это еще раз, это помогает убрать баг в котором блок западал 
-
 
 function animate_menu() {
 	$(".menu-logo").animate({
@@ -247,71 +243,55 @@ function animate_menu() {
    }, 300);
 }
 
-
- $(".header-page").animate({
-    top: "0"
+// n - иднекс позиционирования
+// функция для смены положения блока 
+function animate_position(n) {
+    
+    $(".header-page").animate({
+    top: "-"+(n*document.documentElement.clientHeight)
   }, 1 );
+
+ $(".portfolio").animate({
+    top: "-"+(n*document.documentElement.clientHeight)
+  }, 1);
 
  $(".feedback").animate({
-    top: ""+document.documentElement.clientHeight
-  }, 1);
- $(".crew").animate({
-    top: ""+document.documentElement.clientHeight
+    top: "-"+(n*document.documentElement.clientHeight)
   }, 1 );
+
+
+   $(".crew").animate({
+    top: "-"+(n*document.documentElement.clientHeight)
+  }, 1 );
+    
+   $(".contact").animate({
+    top: "-"+(n*document.documentElement.clientHeight)
+  }, 1 );
+
+}
+
+function setmenu(name,color) {
+
+   $(".menu-caption").text(name);
+   $(".menu-caption").css({color:color});
+   $(".menu-list li").css({color:color});
+   $(".menu-logo svg").css({stroke:color});
+   $(".linemove").css({background:color});
+}
 
 
 
 $("#frame-header").click(function(){
 
-  $(".header-page").animate({
-    top: "-"+document.documentElement.clientHeight
-  }, 1 );
-
- $(".portfolio").animate({
-    top: "-"+document.documentElement.clientHeight
-  }, 1);
-
- $(".feedback").animate({
-    top: "-"+document.documentElement.clientHeight
-  }, 1 );
-
-
-   $(".crew").animate({
-    top: "-"+document.documentElement.clientHeight
-  }, 1 );
-    
-   $(".contact").animate({
-    top: "-"+document.documentElement.clientHeight
-  }, 1 );
+    animate_position(1);
 
 });
 
 $("#frame-portfolio").click(function(){
 
-  $(".portfolio").animate({
-    top: "-"+document.documentElement.clientHeight
-  }, 1 );
-
- $(".feedback").animate({
-    top: "-"+document.documentElement.clientHeight
-  }, 1);
- $(".crew").animate({
-    top: "-"+document.documentElement.clientHeight
-  }, 1 );
-
- $(".contact").animate({
-    top: "-"+document.documentElement.clientHeight
-  }, 1 );
-
-
-
-   animate_menu();
-   
-   $(".menu-caption").text("showcase");
-   $(".menu-caption").css({color:"white"});
-   $(".menu-list li").css({color:"white"});
-   $(".menu-logo svg").css({stroke:"white"});
-   $(".linemove").css({background:"white"});
+  animate_position(1);
+  animate_menu();
+  setmenu("showcase","white");
 
 });
 
@@ -319,33 +299,10 @@ $("#frame-portfolio").click(function(){
 
 
 $("#frame-feedback").click(function(){
-  $(".header-page").animate({
-    top: "-"+(2*document.documentElement.clientHeight)
-  }, 1 );
-  $(".portfolio").animate({
-    top: "-"+(2*document.documentElement.clientHeight)
-  }, 1 );
 
- $(".feedback").animate({
-    top: "-"+(2*document.documentElement.clientHeight)
-  }, 1 );
- $(".crew").animate({
-    top: "-"+(2*document.documentElement.clientHeight)
-  }, 1 );
-
- $(".contact").animate({
-    top: "-"+(2*document.documentElement.clientHeight)
-  }, 1 );
-
-   
+  animate_position(2);
   animate_menu();
-
-
-   $(".menu-caption").text("Parthners");
-   $(".menu-caption").css({color:"black"});
-   $(".menu-list li").css({color:"black"});
-   $(".menu-logo svg").css({stroke:"black"});
-   $(".linemove").css({background:"black"});
+  setmenu("Parthners","black");
 
 });
 
@@ -353,67 +310,23 @@ $("#frame-feedback").click(function(){
 
 
 $("#frame-crew").click(function(){
-  $(".header-page").animate({
-    top: "-"+(3*document.documentElement.clientHeight)
-  }, 1 );
-  $(".portfolio").animate({
-    top: "-"+(3*document.documentElement.clientHeight)
-  }, 1 );
 
- $(".feedback").animate({
-    top: "-"+(3*document.documentElement.clientHeight)
-  }, 1 );
- $(".crew").animate({
-    top: "-"+(3*document.documentElement.clientHeight)
-  }, 1 );
-
- $(".contact").animate({
-    top: "-"+(3*document.documentElement.clientHeight)
-  }, 1 );
-
-   animate_menu();
-
-   $(".menu-caption").text("Crew");
-   $(".menu-caption").css({color:"black"});
-   $(".menu-list li").css({color:"black"});
-   $(".menu-logo svg").css({stroke:"black"});
-   $(".linemove").css({background:"black"});
+  animate_position(3);
+  animate_menu();
+  setmenu("Crew","black");
 
 
 });
 
 $("#frame-contact").click(function(){
        
-   $(".header-page").animate({
-    top: "-"+(4*document.documentElement.clientHeight)
-  }, 1 );
-
-    $(".portfolio").animate({
-    top: "-"+(4*document.documentElement.clientHeight)
-  }, 1 );
-
-   $(".feedback").animate({
-    top: "-"+(4*document.documentElement.clientHeight)
-  }, 1 );
-   $(".crew").animate({
-    top: "-"+(4*document.documentElement.clientHeight)
-  }, 1 );
-
-   $(".contact").animate({
-    top: "-"+(4*document.documentElement.clientHeight)
-  }, 1 );
-
-    animate_menu();
-
-   $(".menu-caption").text("Contact");
-   $(".menu-caption").css({color:"white"});
-   $(".menu-list li").css({color:"white"});
-   $(".menu-logo svg").css({stroke:"white"});
-   $(".linemove").css({background:"white"});
+   animate_position(4); 
+   animate_menu();
+   setmenu("Contact","white");
 
 
 
-	});
+});
 
 $(".main-frame").css({height:""+document.documentElement.clientHeight+"px"});
 $(".frame-cont").css({height:""+document.documentElement.clientHeight+"px"});
@@ -429,8 +342,13 @@ window.onresize = function () {
 }
 
 
+//скроллинг
 
 
+window.onscroll = function() {
+  var scrolled = window.pageYOffset || document.documentElement.scrollTop;
+  alert(scrolled);
+}
 
 
 

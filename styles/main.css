@@ -156,7 +156,6 @@ body {
 /* Стили блока хедера */
 
 .header-page {
-	
 	position: relative;
 	z-index: 10;
 	background-color: white;
@@ -178,12 +177,11 @@ body {
 /* Если хотите поменять высоту логотипа, 
 то меняйте значение padding-top у селектора .logo */
 .logo {
-   
    margin: 0 auto;
    position: relative;
    width: 400px;
-   //padding-top: 55px;
-   }
+   padding-top: 55px;
+}
 
 .logo-icon {
 	position: absolute;
@@ -210,11 +208,6 @@ body {
 	
 	position: relative;
 	height: inherit;
-
-
-
-
-	
 }
 
 .fade-header  {
@@ -253,7 +246,6 @@ body {
 
 .mark-header {
 
-    //margin-top: 20px;
     position: absolute;
     height: 6px;
     width: 6px;
@@ -355,15 +347,15 @@ body {
 
 
 .portfolio {
-
     
-     position: relative;
+    position: relative;
+ }
 
-    
-}
 /* Стилизуем слайдер
    Основна реализация слайдера в js
  */
+
+
 
 .slideshow-container-portfolio {
 
@@ -389,10 +381,37 @@ body {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
-    
-	animation-name: fade-portfolio;
+    animation-name: fade-portfolio;
 	animation-duration: 2s;
+	position: relative;
 
+}
+
+.requareto-portfolio {
+	position: relative;
+}
+
+.requareto-portfolio a {
+    
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    margin-top: 20px;
+    margin-right: 5px;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+.requareto-portfolio a:nth-child(1) {
+      width: 200px;
+}
+.requareto-portfolio a:nth-child(2) {
+      width: 300px;
+      margin-left: 0px;
 }
 
 
@@ -453,12 +472,14 @@ body {
 	  font-size: 20px;
 	  text-shadow: 3px 1px 15px rgba(0, 0, 0, 0.3);
 }
+
 .description-portfolio {
 	width: 600px;
+	height: 250px;
 	color: white;
-	//padding-top: 300px;
-	padding-left: 115px;
-
+	position: absolute;
+	top: 30%;
+	left: 100px;
 }
 
 .social-porfolio {
@@ -492,14 +513,14 @@ body {
 	font-size: 103px;
 	color: white;
 	font-weight: bold;
-	opacity: 0.5;
+	opacity: 0.4;
 	position: absolute;
 	bottom: 55px;
 	left: 260px;
     text-shadow: 3px 1px 15px rgba(0, 0, 0, 0.3);
+    filter: blur(0.8px);
+}
 
-    
- }
 
 
 /* Конец стили портфолио */
@@ -512,11 +533,18 @@ body {
 .feedback {
 
 	position: relative;
-
-	
-	
 }
 
+
+.wrapp-center-feedback {
+	position: absolute;
+	height: 400px;
+    margin: auto;
+	top: 0px;
+	bottom:0px;
+	left: 0px;
+	right: 0px;
+}
 
 .title-feedback {
 	text-align: center;
@@ -533,14 +561,9 @@ body {
 .slideshow-container-feedback {
 	
 	position: relative;
-	//height: 400px;
-
-
-	
 }
 
 .fade-feedback  {
-	//margin-top: 50px;
 	transition: all 0.3s ease;
 	animation-name: fade-feedback;
 	animation-duration: 1.5s;
@@ -549,7 +572,8 @@ body {
 
 
 .mark-feedback {
-    //margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 50px;
     display: table;
     margin: auto;
    
@@ -674,11 +698,18 @@ body {
 }
 
 .team-container {
-	
+	position: absolute;
+	top: 0px;
+	bottom:0px;
+	left: 0px;
+	right: 0px;
+	margin: auto;
+	height: 460px;
+	width: 1000px;
 }
 
 .crewman {
-	height: 460px;
+	height: inherit;
 	width: 275px;
 	border-radius: 50px;
    -webkit-box-shadow: -1px 5px 21px 0px rgba(0,0,0,0.35);
