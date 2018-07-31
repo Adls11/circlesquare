@@ -9,7 +9,7 @@ $(window).load(function() {
 // Сделать общую функцию для добавлению слайдеров без
 // правки скрипта
 
-/* Сладер для блока кейсов */
+/* Слайдер для блока кейсов */
 
 var slideIndex_porfolio = 1;
 showSlides_porfolio(slideIndex_porfolio);
@@ -136,6 +136,9 @@ function showSlides_feedback(n) {
   }
 
 
+
+
+
 /*
  function autoplay_feedback() {
      
@@ -150,6 +153,58 @@ autoplay_feedback();
 */
 
 
+//Для первого слайдера
+
+//-250
+$("#slide-header-1").click(function(){
+     
+      $(".fade-header").animate({
+    top: "0"
+      }, 1);
+     
+     $("#slide-header-1").css({background:"black"});
+     $("#slide-header-2").css({background:"#C4C4C4"});
+     $("#slide-header-3").css({background:"#C4C4C4"});
+     $("#slide-header-4").css({background:"#C4C4C4"});
+
+});
+
+$("#slide-header-2").click(function(){
+     
+      $(".fade-header").animate({
+    top: "-250"
+      }, 1);
+
+  $("#slide-header-1").css({background:"#C4C4C4"});
+  $("#slide-header-2").css({background:"black"});
+  $("#slide-header-3").css({background:"#C4C4C4"});
+  $("#slide-header-4").css({background:"#C4C4C4"});
+
+});
+
+$("#slide-header-3").click(function(){
+     
+      $(".fade-header").animate({
+    top: "-500"
+      }, 1);
+
+  $("#slide-header-1").css({background:"#C4C4C4"});
+  $("#slide-header-2").css({background:"#C4C4C4"});
+  $("#slide-header-3").css({background:"black"});
+  $("#slide-header-4").css({background:"#C4C4C4"});
+});
+
+$("#slide-header-4").click(function(){
+     
+      $(".fade-header").animate({
+    top: "-750"
+      }, 1);
+
+  $("#slide-header-1").css({background:"#C4C4C4"});
+  $("#slide-header-2").css({background:"#C4C4C4"});
+  $("#slide-header-3").css({background:"#C4C4C4"});
+  $("#slide-header-4").css({background:"black"});
+});
 
 
 
@@ -167,7 +222,8 @@ autoplay_feedback();
 
 
 //анимирую это еще раз, это помогает убрать баг в котором блок западал 
- $(".portfolio").animate({
+
+ $(".header-page").animate({
     top: "0"
   }, 1 );
 
@@ -178,17 +234,40 @@ autoplay_feedback();
     top: ""+document.documentElement.clientHeight
   }, 1 );
 
+
+
+$("#frame-header").click(function(){
+
+  $(".header-page").animate({
+    top: "-"+document.documentElement.clientHeight
+  }, 1 );
+
+ $(".portfolio").animate({
+    top: "-"+document.documentElement.clientHeight
+  }, 1);
+
+ $(".feedback").animate({
+    top: "-"+document.documentElement.clientHeight
+  }, 1 );
+
+
+   $(".crew").animate({
+    top: "-"+document.documentElement.clientHeight
+  }, 1 );
+
+});
 
 $("#frame-portfolio").click(function(){
+
   $(".portfolio").animate({
-    top: "0"
+    top: "-"+document.documentElement.clientHeight
   }, 1 );
 
  $(".feedback").animate({
-    top: ""+document.documentElement.clientHeight
+    top: "-"+document.documentElement.clientHeight
   }, 1);
  $(".crew").animate({
-    top: ""+document.documentElement.clientHeight
+    top: "-"+document.documentElement.clientHeight
   }, 1 );
 
 
@@ -221,15 +300,18 @@ $("#frame-portfolio").click(function(){
 
 
 $("#frame-feedback").click(function(){
+  $(".header-page").animate({
+    top: "-"+(2*document.documentElement.clientHeight)
+  }, 1 );
   $(".portfolio").animate({
-    top: "-"+document.documentElement.clientHeight
+    top: "-"+(2*document.documentElement.clientHeight)
   }, 1 );
 
  $(".feedback").animate({
-    top: "-"+document.documentElement.clientHeight
+    top: "-"+(2*document.documentElement.clientHeight)
   }, 1 );
  $(".crew").animate({
-    top: "-"+document.documentElement.clientHeight
+    top: "-"+(2*document.documentElement.clientHeight)
   }, 1 );
 
    
@@ -262,15 +344,18 @@ $("#frame-feedback").click(function(){
 
 
 $("#frame-crew").click(function(){
+  $(".header-page").animate({
+    top: "-"+(3*document.documentElement.clientHeight)
+  }, 1 );
   $(".portfolio").animate({
-    top: "-"+(2*document.documentElement.clientHeight)
+    top: "-"+(3*document.documentElement.clientHeight)
   }, 1 );
 
  $(".feedback").animate({
-    top: "-"+(2*document.documentElement.clientHeight)
+    top: "-"+(3*document.documentElement.clientHeight)
   }, 1 );
  $(".crew").animate({
-    top: "-"+(2*document.documentElement.clientHeight)
+    top: "-"+(3*document.documentElement.clientHeight)
   }, 1 );
 
    $(".menu-logo").animate({
@@ -301,11 +386,15 @@ $("#frame-crew").click(function(){
 $(".main-frame").css({height:""+document.documentElement.clientHeight+"px"});
 $(".frame-cont").css({height:""+document.documentElement.clientHeight+"px"});
 $(".fade-portfolio").css({height:""+document.documentElement.clientHeight+"px"});
-//$(".cont-2").css({height:""+document.documentElement.clientHeight+"px"});
-//$(".header").css({height:""+document.documentElement.clientHeight+"px"});
 
 
 
+//динамически меняет высоту контейнеров
+window.onresize = function () {
+   $(".main-frame").css({height:""+document.documentElement.clientHeight+"px"});
+   $(".frame-cont").css({height:""+document.documentElement.clientHeight+"px"});
+   $(".fade-portfolio").css({height:""+document.documentElement.clientHeight+"px"});     
+}
 
 
 
