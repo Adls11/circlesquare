@@ -270,13 +270,15 @@ function animate_position(n) {
 
 }
 
-function setmenu(name,color) {
+function setmenu(name,color, isShadow) {
 
    $(".menu-caption").text(name);
    $(".menu-caption").css({color:color});
    $(".menu-list li").css({color:color});
    $(".menu-logo svg").css({stroke:color});
    $(".linemove").css({background:color});
+   $(".menu-list li").css({textShadow:isShadow});
+   $(".menu-caption").css({textShadow:isShadow});
 }
 
 
@@ -291,7 +293,7 @@ $("#frame-portfolio").click(function(){
 
   animate_position(1);
   animate_menu();
-  setmenu("showcase","white");
+  setmenu("Портфолио","white","3px 1px 15px rgba(0, 0, 0, 0.3)");
 
 });
 
@@ -302,7 +304,8 @@ $("#frame-feedback").click(function(){
 
   animate_position(2);
   animate_menu();
-  setmenu("Parthners","black");
+  setmenu("Отзывы","#3E3E3E","none");
+
 
 });
 
@@ -313,7 +316,7 @@ $("#frame-crew").click(function(){
 
   animate_position(3);
   animate_menu();
-  setmenu("Crew","black");
+  setmenu("Наша команда","#3E3E3E","noe");
 
 
 });
@@ -322,7 +325,7 @@ $("#frame-contact").click(function(){
        
    animate_position(4); 
    animate_menu();
-   setmenu("Contact","white");
+   setmenu("Связаться с нами","white","3px 1px 15px rgba(0, 0, 0, 0.3)");
 
 
 
@@ -331,6 +334,9 @@ $("#frame-contact").click(function(){
 $(".main-frame").css({height:""+document.documentElement.clientHeight+"px"});
 $(".frame-cont").css({height:""+document.documentElement.clientHeight+"px"});
 $(".fade-portfolio").css({height:""+document.documentElement.clientHeight+"px"});
+$(".data-contact").css({height:""+document.documentElement.clientHeight+"px"});
+$(".form-contant").css({height:""+document.documentElement.clientHeight+"px"});
+
 
 
 
@@ -338,7 +344,9 @@ $(".fade-portfolio").css({height:""+document.documentElement.clientHeight+"px"})
 window.onresize = function () {
    $(".main-frame").css({height:""+document.documentElement.clientHeight+"px"});
    $(".frame-cont").css({height:""+document.documentElement.clientHeight+"px"});
-   $(".fade-portfolio").css({height:""+document.documentElement.clientHeight+"px"});     
+   $(".fade-portfolio").css({height:""+document.documentElement.clientHeight+"px"});  
+   $(".data-contact").css({height:""+document.documentElement.clientHeight+"px"});
+   $(".form-contant").css({height:""+document.documentElement.clientHeight+"px"});   
 }
 
 

@@ -789,6 +789,12 @@ box-shadow: -1px 5px 21px 0px rgba(0,0,0,0.35);
 
 
 
+
+
+
+
+
+
 /* стилизуем фрейм для прокрутки */
 
 .main-frame {
@@ -805,10 +811,145 @@ box-shadow: -1px 5px 21px 0px rgba(0,0,0,0.35);
 
 }
 
+.data-contact {
+	float: left;
+	width: 50%;
+	position: relative;
 
+}
 
+.form-contant {
+	float: right;
+	width: 50%;
+	position: relative;
+}
 
+.data-contact .data-cont p {
+	margin: 0px;
+	padding: 0px;
+	color: white;
+	font-size: 30px;
+}
 
+.data-contact .data-cont p {
+	margin-bottom: 20px;
+}
+
+.data-contact .data-cont p:last-child {
+	margin-bottom: 0px;
+}
+
+.data-contact .data-cont span {
+	font-size: 15px;
+	margin: 0px;
+	padding: 0px;
+	color: white;
+
+}
+
+.data-contact .data-cont {
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	margin: auto;
+	height: 150px; 
+	text-align: right;
+	margin-right: 100px;
+}
+
+.form-contant .form-cont {
+	background-color: white;
+	height: 450px;
+	width: 450px;
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	margin: auto;
+	margin-left: 60px;
+}
+
+.form-contant .form-cont form input[type="name"],
+.form-contant .form-cont form input[type="email"] {
+    outline: none;
+	resize: vertical;
+	width: 370px;
+	border: 0px;
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 22px;
+    border-bottom: 1px solid rgb(191, 191, 191);
+    padding-left: 30px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
+
+.form-contant .form-cont form input[type="submit"] {
+    
+    border-radius: 0px;
+    border: 0px;
+    height: 45px;
+    width: 250px;
+    cursor: pointer;
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 25px;
+    margin-right: 10px;
+
+   
+}
+
+.file_upload{
+
+    position: relative;
+    overflow: hidden;
+    font-size: 25px;              /* example */
+    height: 45px;
+    width: 190px;
+    line-height: 45px;                 /* example */
+    text-align: center;
+    float: right;
+    font-family: 'Didact Gothic', sans-serif;
+    background-color: white;
+ 
+
+}
+
+.file_upload .button, .file_upload > mark{
+    display: block;
+    cursor: pointer;              /* example */
+}
+.file_upload .button {
+   
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;                 /* example */
+    height: 100%;
+    text-align: center;           /* example */
+    margin:0 auto; 
+    width: 100%;
+}
+.file_upload > mark{
+    background: transparent;     /* example */
+     
+}
+
+.form-cont {
+	position: relative;
+}
+
+.button-cont {
+	position: absolute;
+	bottom: -60px;
+}
+
+input::-webkit-input-placeholder {color:#BFBFBF;}
+input::-moz-placeholder          {color:#BFBFBF;}/* Firefox 19+ */
+input:-moz-placeholder           {color:#BFBFBF;}/* Firefox 18- */
+input:-ms-input-placeholder      {color:#BFBFBF;}
 
 
 
