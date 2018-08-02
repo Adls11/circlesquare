@@ -365,11 +365,25 @@ $("#frame-contact").click(function(){
 
 
 
+$(".main-frame").css({height:""+$(window).height()+"px"});
+$(".frame-cont").css({height:""+$(window).height()+"px"});
+$(".fade-portfolio").css({height:""+$(window).height()+"px"});
+$(".data-contact").css({height:""+$(window).height()+"px"});
+$(".form-contant").css({height:""+$(window).height()+"px"});
 
-//динамически меняет высоту контейнеров
+
+
+
+//динамически меняет высоту контейнера
 
 
    $(window).resize(function () {
+   
+   $(".main-frame").css({height:""+$(window).height()+"px"});
+   $(".frame-cont").css({height:""+$(window).height()+"px"});
+   $(".fade-portfolio").css({height:""+$(window).height()+"px"});
+   $(".data-contact").css({height:""+$(window).height()+"px"});
+   $(".form-contant").css({height:""+$(window).height()+"px"});
    
    if (isHeader == true) {animate_position(1);}
    if (isPorfolio == true) {animate_position(1);}
