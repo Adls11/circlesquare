@@ -248,24 +248,24 @@ function animate_menu() {
 function animate_position(n) {
     
     $(".header-page").animate({
-    top: "-"+(n*document.documentElement.clientHeight)
+    top: "-"+(n*($(window).height()))
   }, 1 );
 
  $(".portfolio").animate({
-    top: "-"+(n*document.documentElement.clientHeight)
+    top: "-"+(n*($(window).height()))
   }, 1);
 
  $(".feedback").animate({
-    top: "-"+(n*document.documentElement.clientHeight)
+    top: "-"+(n*($(window).height()))
   }, 1 );
 
 
    $(".crew").animate({
-    top: "-"+(n*document.documentElement.clientHeight)
+    top: "-"+(n*($(window).height()))
   }, 1 );
     
    $(".contact").animate({
-    top: "-"+(n*document.documentElement.clientHeight)
+    top: "-"+(n*($(window).height()))
   }, 1 );
 
 }
@@ -282,10 +282,21 @@ function setmenu(name,color, isShadow) {
 }
 
 
+var isHeader = false;
+var isPorfolio = false;
+var isFeedback = false;
+var isCrew = false;
+var isContact = false;
+
 
 $("#frame-header").click(function(){
 
     animate_position(1);
+    isHeader = true;
+    isPorfolio = false;
+    isFeedback = false;
+    isCrew = false;
+    isContact = false;
 
 });
 
@@ -294,6 +305,11 @@ $("#frame-portfolio").click(function(){
   animate_position(1);
   animate_menu();
   setmenu("Портфолио","white","3px 1px 15px rgba(0, 0, 0, 0.3)");
+  isHeader = false;
+  isPorfolio = true;
+  isFeedback = false;
+  isCrew = false;
+  isContact = false;
 
 });
 
@@ -305,6 +321,11 @@ $("#frame-feedback").click(function(){
   animate_position(2);
   animate_menu();
   setmenu("Отзывы","#3E3E3E","none");
+  isHeader = false;
+  isPorfolio = false;
+  isFeedback = true;
+  isCrew = false;
+  isContact = false;
 
 
 });
@@ -317,6 +338,11 @@ $("#frame-crew").click(function(){
   animate_position(3);
   animate_menu();
   setmenu("Наша команда","#3E3E3E","noe");
+  isHeader = false;
+  isPorfolio = false;
+  isFeedback = false;
+  isCrew = true;
+  isContact = false;
 
 
 });
@@ -326,39 +352,44 @@ $("#frame-contact").click(function(){
    animate_position(4); 
    animate_menu();
    setmenu("Связаться с нами","white","3px 1px 15px rgba(0, 0, 0, 0.3)");
+   isHeader = false;
+   isPorfolio = false;
+   isFeedback = false;
+   isCrew = false;
+   isContact = true;
 
 
 
 });
 
-$(".main-frame").css({height:""+document.documentElement.clientHeight+"px"});
-$(".frame-cont").css({height:""+document.documentElement.clientHeight+"px"});
-$(".fade-portfolio").css({height:""+document.documentElement.clientHeight+"px"});
-$(".data-contact").css({height:""+document.documentElement.clientHeight+"px"});
-$(".form-contant").css({height:""+document.documentElement.clientHeight+"px"});
 
 
 
 
 //динамически меняет высоту контейнеров
-window.onresize = function () {
-   $(".main-frame").css({height:""+document.documentElement.clientHeight+"px"});
-   $(".frame-cont").css({height:""+document.documentElement.clientHeight+"px"});
-   $(".fade-portfolio").css({height:""+document.documentElement.clientHeight+"px"});  
-   $(".data-contact").css({height:""+document.documentElement.clientHeight+"px"});
-   $(".form-contant").css({height:""+document.documentElement.clientHeight+"px"});   
-}
+
+
+   $(window).resize(function () {
+   
+   if (isHeader == true) {animate_position(1);}
+   if (isPorfolio == true) {animate_position(1);}
+   if (isFeedback == true) {animate_position(2);}
+   if (isCrew == true) {animate_position(3);}
+   if (isContact == true) {animate_position(4);}
+});
+
+
 
 
 //скроллинг
 
-
+/*
 window.onscroll = function() {
   var scrolled = window.pageYOffset || document.documentElement.scrollTop;
   alert(scrolled);
 }
 
-
+*/
 
 
 

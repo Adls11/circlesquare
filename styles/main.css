@@ -2,7 +2,7 @@ body {
 	
 	margin: 0;
 	padding: 0;
-	min-width: 1024px;
+	//min-width: 1024px;
 	font-family: 'Open Sans', sans-serif;
 
 
@@ -160,6 +160,7 @@ body {
 	z-index: 10;
 	background-color: white;
 	transition-duration: 1s; 
+	
 }
 
 
@@ -384,6 +385,8 @@ body {
     animation-name: fade-portfolio;
 	animation-duration: 2s;
 	position: relative;
+	 width: 100vw;
+  height: 100vh;
 
 }
 
@@ -802,12 +805,16 @@ box-shadow: -1px 5px 21px 0px rgba(0,0,0,0.35);
 	overflow: hidden;
 	position: relative;
 	transition-duration: 1s;
+	width: 100vw;
+    height: 100vh;
+
 
 }
 
 .frame-cont {
 	transition-duration: 1s; 
 	transition-timing-function: ease;
+	height: inherit;
 
 }
 
@@ -815,6 +822,8 @@ box-shadow: -1px 5px 21px 0px rgba(0,0,0,0.35);
 	float: left;
 	width: 50%;
 	position: relative;
+	// width: 100vw;
+  height: 100vh;
 
 }
 
@@ -822,6 +831,8 @@ box-shadow: -1px 5px 21px 0px rgba(0,0,0,0.35);
 	float: right;
 	width: 50%;
 	position: relative;
+	// width: 100vw;
+  height: 100vh;
 }
 
 .data-contact .data-cont p {
@@ -903,6 +914,10 @@ box-shadow: -1px 5px 21px 0px rgba(0,0,0,0.35);
    
 }
 
+form input[type="file"] {
+	 visibility: hidden;
+}
+
 .file_upload{
 
     position: relative;
@@ -918,6 +933,13 @@ box-shadow: -1px 5px 21px 0px rgba(0,0,0,0.35);
  
 
 }
+
+input::-webkit-input-placeholder {color:#BFBFBF;}
+input::-moz-placeholder          {color:#BFBFBF;}/* Firefox 19+ */
+input:-moz-placeholder           {color:#BFBFBF;}/* Firefox 18- */
+input:-ms-input-placeholder      {color:#BFBFBF;}
+
+
 
 .file_upload .button, .file_upload > mark{
     display: block;
@@ -946,10 +968,7 @@ box-shadow: -1px 5px 21px 0px rgba(0,0,0,0.35);
 	bottom: -60px;
 }
 
-input::-webkit-input-placeholder {color:#BFBFBF;}
-input::-moz-placeholder          {color:#BFBFBF;}/* Firefox 19+ */
-input:-moz-placeholder           {color:#BFBFBF;}/* Firefox 18- */
-input:-ms-input-placeholder      {color:#BFBFBF;}
+
 
 
 
