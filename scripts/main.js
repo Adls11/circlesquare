@@ -370,6 +370,8 @@ $(".frame-cont").css({height:""+$(window).height()+"px"});
 $(".fade-portfolio").css({height:""+$(window).height()+"px"});
 $(".data-contact").css({height:""+$(window).height()+"px"});
 $(".form-contant").css({height:""+$(window).height()+"px"});
+$(".menu").css({width:""+($(window).width()-70)+"px"});
+
 
 
 
@@ -384,6 +386,8 @@ $(".form-contant").css({height:""+$(window).height()+"px"});
    $(".fade-portfolio").css({height:""+$(window).height()+"px"});
    $(".data-contact").css({height:""+$(window).height()+"px"});
    $(".form-contant").css({height:""+$(window).height()+"px"});
+   $(".menu").css({width:""+($(window).width()-70)+"px"});
+
    
    if (isHeader == true) {animate_position(1);}
    if (isPorfolio == true) {animate_position(1);}

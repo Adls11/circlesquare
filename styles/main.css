@@ -47,6 +47,7 @@ body {
 
 /* Стилизую меню */
 
+
 .menu {
    position: fixed;
    top: 50px;
@@ -94,12 +95,13 @@ body {
 	margin: 0px;
 	padding: 0px;
 	float: right;
-
-	
-
 }
 
 
+
+.menu-list ul {
+	margin-right: 200px;
+} 
 
 /* Создал этот блок чтобы сделать красивый ховер*/
 
@@ -152,8 +154,6 @@ body {
 
 
 
-
-
 /* Стили блока хедера */
 
 .header-page {
@@ -161,6 +161,7 @@ body {
 	z-index: 10;
 	background-color: white;
 	transition-duration: 1s; 
+	min-width: 375px;
 	
 }
 
