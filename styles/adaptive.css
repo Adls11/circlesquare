@@ -1,0 +1,459 @@
+
+
+/* Mobile S */
+@media screen and (max-width: 320px) { 
+   
+  
+}
+
+
+/* Mobile M */
+@media  screen  and (max-width: 375px) { 
+   
+  
+
+}
+
+/* Mobile L */
+@media  screen and (max-width: 425px) { 
+   
+   /* Стили блока хедера */
+
+
+/* Если хотите поменять высоту логотипа, 
+то меняйте значение padding-top у селектора .logo */
+.logo {
+   margin: 0 auto;
+   position: absolute;
+   width: 250px;
+   padding-top: 0px;
+   bottom: 30px;
+   left: 50px;
+}
+
+.logo-icon {
+	position: absolute;
+	bottom: 12px;
+	right: 0;
+	
+
+}
+
+.logo-icon svg {
+
+  height: 32px;
+  width: 32px;
+
+}
+
+.logo-name {
+	
+	font-family: 'Didact Gothic', sans-serif;
+	font-weight: 400;
+	font-size: 25px;
+	text-align: right;
+	padding-bottom: 20px;
+	padding-right: 40px;
+
+}
+
+
+/* Стилизую слайдер */
+
+.slideshow-container-header {
+	
+	position: relative;
+	height: inherit;
+}
+
+.fade-header  {
+	transition: all 0.3s ease;
+	width: inherit;
+	height: inherit;
+	font-family: 'didact gothic';
+	position: relative;	
+  
+}
+
+.fade-header p {
+	text-align: center;
+	font-size: 18px;
+	margin: 0px;
+	padding: 0px;
+	
+}
+
+.frame-slides-header {
+
+    overflow: scroll;
+	width: 300px;
+	height: 250px;
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+    margin: auto;
+   
+   
+} 
+
+
+
+
+.mark-header {
+
+    position: absolute;
+    height: 3px;
+    width: 3px;
+	top: -200px;
+	bottom: 0px;
+    right: 25px;
+    margin: auto;
+ }
+
+
+.dot-header {
+
+	cursor: pointer;
+	height: 3px;
+	width: 3px;
+	background-color: #C4C4C4;
+	display: block;
+	margin-top: 10px;
+	transition-duration: 0.5s;
+	
+}
+
+
+.dot-header:hover {
+	background-color: black;
+	transition-duration: 0.5s;
+}
+
+
+.dot-header:nth-child(1) {
+	background-color: black;
+}
+
+/* Задаю абсолютное позиционирование для уголках */
+
+
+.left-top-rangle, 
+.right-top-rangle, 
+.left-bottom-rangle, 
+.right-bottom-rangle {
+
+	position: absolute;
+}
+
+.left-top-rangle {
+	top: 32px;
+	left: 32px;
+
+}
+
+.left-top-rangle svg {
+	width: 32px;
+	height: 32px;
+}
+
+.right-top-rangle {
+	top: 32px;
+	right: 32px;
+ 
+}
+
+.right-top-rangle  svg {
+	height: 32px;
+	width: 32px;
+}
+
+.left-bottom-rangle {
+	bottom: 100px;
+	left: 32px;
+	height: 32px;
+	width: 32px;
+
+}
+
+.left-bottom-rangle svg {
+	height: 32px;
+	width: 32px;
+}
+
+.right-bottom-rangle {
+	bottom: 100px;
+	right: 32px;
+	border-right: 4px solid black;
+	border-bottom: 4px solid black;
+	height: 32px;
+	width: 32px;
+}
+
+.show-frame {
+	position: absolute;
+	bottom: 60px;
+	right: 85px;
+}
+
+
+.show-frame::after {
+	content: "";
+	text-align: none;
+	position: none;
+	bottom: 0px;
+    left: 0px;
+	margin: 0;
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 0px;
+    color: none;
+    width: 16px;
+    height: 16px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.26);
+    border-right: 2px solid rgba(0, 0, 0, 0.26);
+    transform: rotate(-45deg);
+    cursor: pointer;
+
+
+}
+
+
+/* Начало стили блока портфолио */
+
+.portfolio {
+	background-color: #3E3E3E;
+}
+
+.fade-portfolio {
+	height: 85vh !important;
+	width: 95% !important;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom;
+	margin: auto;
+	margin-top: 10px;
+	border-radius: 30px;
+
+	
+}
+.social-porfolio {
+	display: none;
+}
+
+.menu {
+	overflow: scroll;
+}
+
+
+}
+
+
+
+
+/* Tablet */
+@media  screen and (max-width: 768px) { 
+
+.logo {
+   margin: 0 auto;
+   position: absolute;
+   width: 250px;
+   padding-top: 0px;
+   bottom: 30px;
+   left: 50px;
+}
+
+.logo-icon {
+	position: absolute;
+	bottom: 12px;
+	right: 0;
+	
+
+}
+
+.logo-icon svg {
+
+  height: 32px;
+  width: 32px;
+
+}
+
+.logo-name {
+	
+	font-family: 'Didact Gothic', sans-serif;
+	font-weight: 400;
+	font-size: 25px;
+	text-align: right;
+	padding-bottom: 20px;
+	padding-right: 40px;
+
+}
+
+
+/* Стилизую слайдер */
+
+.slideshow-container-header {
+	
+	position: relative;
+	height: inherit;
+}
+
+.fade-header  {
+	transition: all 0.3s ease;
+	width: inherit;
+	height: inherit;
+	font-family: 'didact gothic';
+	position: relative;	
+  
+}
+
+.fade-header p {
+	text-align: center;
+	font-size: 18px;
+	margin: 0px;
+	padding: 0px;
+	
+}
+
+.frame-slides-header {
+
+    overflow: scroll;
+	width: 300px;
+	height: 250px;
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+    margin: auto;
+   
+   
+} 
+
+
+
+
+.mark-header {
+
+    position: absolute;
+    height: 3px;
+    width: 3px;
+	top: -200px;
+	bottom: 0px;
+    right: 25px;
+    margin: auto;
+ }
+
+
+.dot-header {
+
+	cursor: pointer;
+	height: 3px;
+	width: 3px;
+	background-color: #C4C4C4;
+	display: block;
+	margin-top: 10px;
+	transition-duration: 0.5s;
+	
+}
+
+
+.dot-header:hover {
+	background-color: black;
+	transition-duration: 0.5s;
+}
+
+
+.dot-header:nth-child(1) {
+	background-color: black;
+}
+
+/* Задаю абсолютное позиционирование для уголках */
+
+
+.left-top-rangle, 
+.right-top-rangle, 
+.left-bottom-rangle, 
+.right-bottom-rangle {
+
+	position: absolute;
+}
+
+.left-top-rangle {
+	top: 32px;
+	left: 32px;
+
+}
+
+.left-top-rangle svg {
+	width: 32px;
+	height: 32px;
+}
+
+.right-top-rangle {
+	top: 32px;
+	right: 32px;
+ 
+}
+
+.right-top-rangle  svg {
+	height: 32px;
+	width: 32px;
+}
+
+.left-bottom-rangle {
+	bottom: 100px;
+	left: 32px;
+	height: 32px;
+	width: 32px;
+
+}
+
+.left-bottom-rangle svg {
+	height: 32px;
+	width: 32px;
+}
+
+.right-bottom-rangle {
+	bottom: 100px;
+	right: 32px;
+	border-right: 4px solid black;
+	border-bottom: 4px solid black;
+	height: 32px;
+	width: 32px;
+}
+
+.show-frame {
+	position: absolute;
+	bottom: 60px;
+	right: 85px;
+}
+
+
+.show-frame::after {
+	content: "";
+	text-align: none;
+	position: none;
+	bottom: 0px;
+    left: 0px;
+	margin: 0;
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 0px;
+    color: none;
+    width: 16px;
+    height: 16px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.26);
+    border-right: 2px solid rgba(0, 0, 0, 0.26);
+    transform: rotate(-45deg);
+    cursor: pointer;
+
+
+}
+
+
+}
+
+
+
